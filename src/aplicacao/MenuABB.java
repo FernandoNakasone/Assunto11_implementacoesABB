@@ -11,7 +11,7 @@ public class MenuABB {
         ABBint abb = new ABBint();
 
         do{
-            System.out.println("0 - Sair\n1 - Inserir 1 valor na ABB\n2 - Apresenta ABB (em ordem)");
+            System.out.println("0 - Sair\n1 - Inserir 1 valor na ABB\n2 - Apresenta ABB (em ordem)\n3 - Apresenta quantidade de nos da ABB");
             System.out.print("Opção:");
             opcao = sc.nextInt();
 
@@ -28,6 +28,9 @@ public class MenuABB {
                     System.out.println("\t Apresentação ABB");
                     abb.show(abb.root);
                     System.out.println();
+                    break;
+                case 3:
+                    System.out.println("Quantidade de nos:" + abb.contaNos(abb.root,0));
                     break;
                 default:
                     System.out.println("Opção inválida");
