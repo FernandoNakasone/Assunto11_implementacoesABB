@@ -11,7 +11,7 @@ public class MenuABB {
         ABBint abb = new ABBint();
 
         do{
-            System.out.println("0 - Sair\n1 - Inserir 1 valor na ABB\n2 - Apresenta ABB (em ordem)\n3 - Apresenta quantidade de nos da ABB");
+            System.out.println("0 - Sair\n1 - Inserir 1 valor na ABB\n2 - Apresenta ABB (em ordem)\n3 - Apresenta quantidade de nos da ABB\n4 - Verifica se o NO existe");
             System.out.print("Opção:");
             opcao = sc.nextInt();
 
@@ -31,6 +31,16 @@ public class MenuABB {
                     break;
                 case 3:
                     System.out.println("Quantidade de nos:" + abb.contaNos(abb.root,0));
+                    break;
+                case 4:
+                    int valorProcurado;
+                    System.out.print("Informe o valor a ser procurado:");
+                    valorProcurado = sc.nextInt();
+                    if(abb.achou(abb.root,valorProcurado)){
+                        System.out.println("Valor encontrado");
+                    } else {
+                        System.out.println("Valor não encontrado");
+                    }
                     break;
                 default:
                     System.out.println("Opção inválida");

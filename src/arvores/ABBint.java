@@ -38,4 +38,20 @@ public class ABBint {
         }
         return cont;
     }
+
+    public boolean achou(NO p,int valor){
+        if(p != null) {
+                if (p.dado == valor) {
+                    return true;
+                } else {
+                    if (p.dado > valor) {
+                       return achou(p.esq, valor);
+                    } else {
+                       return achou(p.dir, valor);
+                    }
+                }
+        } else {
+            return false;
+        }
+    }
 }
