@@ -54,4 +54,21 @@ public class ABBint {
             return false;
         }
     }
+
+    public int contaAchou(NO p,int valor, int contador){
+        if(p != null) {
+            contador++;
+            if (p.dado == valor) {
+                return contador;
+            } else {
+                if (p.dado > valor) {
+                    return contaAchou(p.esq, valor,contador);
+                } else {
+                    return contaAchou(p.dir, valor,contador);
+                }
+            }
+        } else {
+            return contador;
+        }
+    }
 }
